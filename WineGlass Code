@@ -1,0 +1,67 @@
+//Create method for the flute
+//In the flute, print out an asterisk
+//then create for loop for the spaces where the space is equal to the SIZE
+//then print out an asterisk after the spaces
+//Next, create a method for the bases
+//In the bases, add a for loop that says to print out asterisks and the amount is the SIZE plus 2
+//Next, create a method for the stem
+//In the stem, create a for loop that prints out the number of space that is the SIZE plus 1 then divide that by 2
+//Then print out an asterisk after that
+//Create the main methos
+//In the main, first create a for loop that repeats all the code to print the glasses that is equal to the number that's inputted
+//Next, create a for loop for the number of lines for the flute
+//It should have the number of lines equal to the SIZE for the flute
+//Next, print out the bases
+//Then, create a for loop for the number of lines for the stem
+//It should have the number of lines equal to the SIZE for the stem
+//Then, print out the bases
+//Now, create the last method, which is where you use the number and SIZE that were inputted and add it to the code
+//Next call 2 example sizes for the drawGlasses(number, SIZE) methods and include it at the end of the main
+
+public class WineGlass {
+    public static final int number = Console.promptInt("Enter a value for number:");
+    public static final int SIZE = Console.promptInt("Enter a value for SIZE:");
+
+    public static void main(String[] args) {
+        for (int x = 1; x <= number; x++) {
+
+            for (int y = 1; y <= SIZE; y++) {
+                printFlute();
+            }
+            printBases();
+            for (int j = 1; j <= SIZE; j++) {
+                printStem();
+            }
+            printBases();
+            drawGlasses(2, 5);
+            drawGlasses(2, 3);
+        }
+    }
+
+    public static void printFlute() {
+        System.out.print("*");
+        for (int j = 1; j <= SIZE; j++) {
+            System.out.print(" ");
+        }
+        System.out.println("*");
+    }
+
+
+    public static void printBases() {
+        for (int i = 1; i <= SIZE + 2; i++) {
+            System.out.print("*");
+        }
+        System.out.println();
+    }
+
+    public static void printStem() {
+        for (int i = 1; i <= (SIZE + 1) / 2; i++) {
+            System.out.print(" ");
+        }
+        System.out.println("*");
+    }
+
+    public static void drawGlasses(int number, int SIZE) {
+        System.out.println();
+    }
+}
